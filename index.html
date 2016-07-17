@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Bangla Writing Pad</title>
+    </head>
+
+    <body>
+        <script src="./js/bt.js" type="text/javascript"></script>
+
+        <form style="font-family: Times New Roman,Times,serif;">
+            <p style="text-align: center;">
+                <span class="style1">
+                    <label><input name="KeyboardLayoutOption" checked="checked" onclick="return KeyboardLayoutOptionClick(event);" type="radio" value="English"> বাংলাটেক্সট</label>&nbsp;
+                    <label><input name="KeyboardLayoutOption" onclick="return KeyboardLayoutOptionClick(event);" type="radio" value="Bijoy"> বিজয়</label>&nbsp;
+                    <label><input name="KeyboardLayoutOption" onclick="return KeyboardLayoutOptionClick(event);" type="radio" value="Somewhere-in"> ফনেটিক</label>&nbsp;
+                    <label><input name="KeyboardLayoutOption" onclick="return KeyboardLayoutOptionClick(event);" type="radio" value="Avro"> অভ্র ফনেটিক</label>&nbsp;
+                    <label><input name="KeyboardLayoutOption" onclick="return KeyboardLayoutOptionClick(event);" type="radio" value="Unijoy"> ইউনিজয়</label>
+                </span>
+            </p>
+
+            <p style="text-align: center;">
+                <textarea
+                      class="textbox_top"
+                      rows="2"
+                      cols="55"
+                      id="text"
+                      name="text"
+                      onkeydown="return KeyBoardDown(event);"
+                      onkeypress="return KeyBoardPress(event);"
+                      style="width: 552px; height: 62px;"
+                      autocomplete="off"
+                      autofocus="true"></textarea>
+
+                <!-- <input id="convert_button" onclick="loadXMLDoc()" type="button" value="Check">  -->
+                <p style="text-align: center;"><input onclick="reset_all(this.form)" type="button" value="ক্লিয়ার টেক্সট"></p>
+            </p>
+        </form>
+    </body>
+</html>
